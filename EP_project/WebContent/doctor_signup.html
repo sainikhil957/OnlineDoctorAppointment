@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient register</title>
+	<link rel="stylesheet" type="text/css" href="patient_signup.css">
+	<script src="registerjs.js"></script>
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+</head>
+<body>
+	
+  <div class="adddetails">
+        <form action="doctor_register_servlet" method="POST">
+          <h2 style="font-weight: bold; color: #333">Doctor details</h2>
+          <div class="form-group">
+                <label>Enter Name:</label>
+                <input type="text" class="form-control" placeholder="First Name" name="name" required/>
+          </div>
+          
+          <div class="form-group">
+            <label>Enter email:</label>
+            <input class="form-control" type="email" required  placeholder="enter email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Enter phonenumber:</label>
+            <input class="form-control" type="text" maxlength="10" placeholder="enter phonenumber" name="phonenumber" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Enter Address:</label>
+            <input class="form-control" type="text" placeholder="Enter Street" name="address" required>
+          </div>
+          
+          <label>Select Your Specialist:</label><br>
+          <select name="specialist" class="custom-select custom-select-lg mb-3">
+  			<option selected>select your problem</option>
+			<option value="heart specialist">heart specialist</option>
+			<option value="lungs specialist">lungs specialist</option>
+			<option value="kidney specialist">kidney specialist</option>
+		   </select>
+           <br>
+          <label>Select your Experience:</label><br>
+          <select name="experience" class="custom-select custom-select-lg mb-3" >
+  			<option selected>Experience</option>
+			<option value="less than 2 years">less than 2 years</option>
+			<option value="2 years">2 years</option>
+			<option value="4 years">4 years</option>
+			<option value="8 years">8 years</option>
+			<option value="more than 8 years">more than 8 years</option>
+		   </select>   
+          <br>
+          
+          <div class="form-group">
+            <label>Enter Password:</label>
+          <input
+            type="password"
+            onblur="veripass1()"
+            class="form-control"
+            id="2"
+            placeholder="Password"
+            required="required"
+            name="password"
+          />
+          <span id="span2"></span>
+        </div>
+        
+        <div class="form-group">
+          <label>Confirm Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            onblur="VerifyPass()"
+            id="3"
+            placeholder="Confirm Password"
+            required="required"
+          />
+          <span id="span3"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-info">Submit</button>
+      </div>
+  
+</body>
+</html>
